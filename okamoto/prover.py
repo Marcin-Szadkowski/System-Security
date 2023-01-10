@@ -4,6 +4,7 @@ from utils import G1, Fr, get_Fr, get_G1, jload, jstore
 
 class Prover(Initiator):
     def __init__(self, g1: G1, g2: G1, ip: str = None, port: int = None):
+        super().__init__(ip, port)
         self.g1 = g1
         self.g2 = g2
         # private values
